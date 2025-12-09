@@ -1,15 +1,15 @@
-# 📧🤖 Automatización Inteligente de Correos con IA, Gmail, Google Sheets y Telegram (n8n)
+# Automatización Inteligente de Correos con IA, Gmail, Google Sheets y Telegram (n8n)
 
 Este proyecto implementa un sistema automatizado que **lee correos entrantes en Gmail**, analiza su contenido mediante **Gemini (IA)**, determina su **prioridad**, asigna **etiquetas en Gmail** (para que al revisar su bandeja pueda decidir de manera rápida que hacer con los correos revisados), envía **alertas por Telegram** si el correo es urgente y finalmente registra un **log detallado en Google Sheets** para mejorar el modelo con el tiempo.
 
 ---
 
-## 🚀 Objetivo del Proyecto
+## Objetivo del Proyecto
 Construir un **asistente inteligente de correos** capaz de gestionar el flujo diario de emails, clasificarlos de forma automática, priorizar los más importantes y ayudarte a tomar acción rápidamente sin revisar manualmente bandejas extensas.
 
 ---
 
-## 🏢 Utilidad
+## Utilidad
 Este tipo de automatización beneficia a profesionales, equipos y empresas que manejan grandes volúmenes de correos:
 
 - **Gerentes y jefaturas** → filtrar lo realmente importante.
@@ -19,22 +19,23 @@ Este tipo de automatización beneficia a profesionales, equipos y empresas que m
 - **Profesionales independientes** → concentrarse en clientes clave.
 
 **Beneficios**
-✔ Reduce tiempos muertos
+
+- Reduce tiempos muertos: 
 La IA identifica automáticamente qué correos requieren atención inmediata y cuáles no.
-✔ Mejora la capacidad de respuesta
+- Mejora la capacidad de respuesta: 
 Los correos urgentes generan alertas instantáneas en Telegram, evitando retrasos críticos.
-✔ Estandariza criterios de prioridad
+- Estandariza criterios de prioridad: 
 Las reglas vienen de Google Sheets, por lo que cualquier área puede ajustar parámetros sin tocar la automatización.
-✔ Aumenta la productividad del equipo
+- Aumenta la productividad del equipo: 
 Los colaboradores se enfocan en tareas de impacto y no en revisar correos irrelevantes.
-✔ Permite auditoría y mejora continua
+- Permite auditoría y mejora continua: 
 Cada análisis se registra en Sheets, pudiendo revisar qué razonamiento tuvo la IA y mejorar los parámetros o prompts con evidencia.
-✔ Escalable para cualquier rol
+- Escalable para cualquier rol: 
 Puede adaptarse para un Analista TI, Jefe de Planeamiento, Gerente, Mesa de Ayuda, etc.
 
 ---
 
-## 🧩 Casos Reales de Uso
+## Casos Reales de Uso
 - Un gerente recibe decenas de correos diarios. La IA detecta cuáles vienen de directores, clientes clave o temas críticos y los notifica a Telegram.
 - Un analista de TI recibe incidentes y solicitudes. La automatización prioriza incidentes críticos según palabras clave.
 - Un consultor independiente clasifica automáticamente clientes VIP, propuestas comerciales, facturas o comunicaciones rutinarias.
@@ -42,7 +43,7 @@ Puede adaptarse para un Analista TI, Jefe de Planeamiento, Gerente, Mesa de Ayud
 
 ---
 
-## 🧠 Arquitectura del Flujo (Mermaid)
+## Arquitectura del Flujo (Mermaid)
 
 ```mermaid
 flowchart TD
@@ -63,7 +64,7 @@ flowchart TD
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 | Componente | Uso |
 |-----------|-----|
 | **Gmail API** | Lectura de correos y asignación de etiquetas |
@@ -74,16 +75,16 @@ flowchart TD
 
 ---
 
-## 🧾 Parámetros Configurables en Google Sheets
+## Parámetros Configurables en Google Sheets
 Tu hoja debe tener estas columnas:
 
-### ✓ **1. Lista VIP **
+### ✓ 1. Lista VIP 
 - Correos
 - Dominios
 - Nombres propios
 - Palabras clave
 
-### ✓ **2. Rol **
+### ✓ 2. Rol 
 Ejemplos:
 - *“Analista de TI que debe priorizar incidentes críticos.”*
 - *“Gerente que debe responder a clientes clave.”*
@@ -91,7 +92,7 @@ Ejemplos:
 
 Este rol contextualiza a Gemini para decidir la prioridad.
 
-### ✓ **3. Lista de correos rutinarios**
+### ✓ 3. Lista de correos rutinarios
 - dominio
 - Boletines
 - Correos automáticos
@@ -132,12 +133,11 @@ Este rol contextualiza a Gemini para decidir la prioridad.
 ---
 
 ## 🎨 Captura del Flujo (n8n)
-*Incluye aquí la captura de tu flujo real.*
 ![Diagrama](./images/esquema.png)
 
 ---
 
-## PROMPT para analizar los corros
+## PROMPT para analizar los correos
 
 ### ROL Eres un Motor de Triaje Masivo de Correos. 
 Tu objetivo es analizar una LISTA de correos electrónicos y clasificar CADA UNO individualmente basándote en las reglas de negocio, devolviendo un resultado estructurado. 
