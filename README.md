@@ -102,7 +102,7 @@ Este rol contextualiza a Gemini para decidir la prioridad.
 
 ---
 
-## 📌 Flujo General del Proceso
+## Flujo General del Proceso
 
 1. La automatización **consulta Google Sheets** y carga:
    - lista VIP
@@ -132,7 +132,7 @@ Este rol contextualiza a Gemini para decidir la prioridad.
 
 ---
 
-## 🎨 Captura del Flujo (n8n)
+## Captura del Flujo (n8n)
 ![Diagrama](./images/esquema.png)
 
 ---
